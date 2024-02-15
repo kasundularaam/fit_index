@@ -1,6 +1,6 @@
 import 'package:fit_index/controller/bmi_result_controller.dart';
 import 'package:fit_index/core/value_validators.dart';
-import 'package:fit_index/view/screens/info_page.dart';
+import 'package:fit_index/view/screens/info/info_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
