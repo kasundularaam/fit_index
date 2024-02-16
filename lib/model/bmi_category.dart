@@ -4,12 +4,14 @@ import 'dart:convert';
 class BmiCategory {
   final double min;
   final double max;
+  final String rangeStr;
   final String category;
   final String message;
   final int backgroundColor;
   BmiCategory({
     required this.min,
     required this.max,
+    required this.rangeStr,
     required this.category,
     required this.message,
     required this.backgroundColor,
@@ -18,6 +20,7 @@ class BmiCategory {
   BmiCategory copyWith({
     double? min,
     double? max,
+    String? rangeStr,
     String? category,
     String? message,
     int? backgroundColor,
@@ -25,6 +28,7 @@ class BmiCategory {
     return BmiCategory(
       min: min ?? this.min,
       max: max ?? this.max,
+      rangeStr: rangeStr ?? this.rangeStr,
       category: category ?? this.category,
       message: message ?? this.message,
       backgroundColor: backgroundColor ?? this.backgroundColor,
@@ -35,6 +39,7 @@ class BmiCategory {
     return <String, dynamic>{
       'min': min,
       'max': max,
+      'rangeStr': rangeStr,
       'category': category,
       'message': message,
       'backgroundColor': backgroundColor,
@@ -45,6 +50,7 @@ class BmiCategory {
     return BmiCategory(
       min: map['min'] as double,
       max: map['max'] as double,
+      rangeStr: map['rangeStr'] as String,
       category: map['category'] as String,
       message: map['message'] as String,
       backgroundColor: map['backgroundColor'] as int,
@@ -58,7 +64,7 @@ class BmiCategory {
 
   @override
   String toString() {
-    return 'BmiCategory(min: $min, max: $max, category: $category, message: $message, backgroundColor: $backgroundColor)';
+    return 'BmiCategory(min: $min, max: $max, rangeStr: $rangeStr, category: $category, message: $message, backgroundColor: $backgroundColor)';
   }
 
   @override
@@ -67,6 +73,7 @@ class BmiCategory {
 
     return other.min == min &&
         other.max == max &&
+        other.rangeStr == rangeStr &&
         other.category == category &&
         other.message == message &&
         other.backgroundColor == backgroundColor;
@@ -76,6 +83,7 @@ class BmiCategory {
   int get hashCode {
     return min.hashCode ^
         max.hashCode ^
+        rangeStr.hashCode ^
         category.hashCode ^
         message.hashCode ^
         backgroundColor.hashCode;

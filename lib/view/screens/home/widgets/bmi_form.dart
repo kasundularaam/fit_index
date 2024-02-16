@@ -1,6 +1,7 @@
 import 'package:fit_index/controller/bmi_result_controller.dart';
 import 'package:fit_index/core/value_validators.dart';
 import 'package:fit_index/view/screens/info/info_page.dart';
+import 'package:fit_index/view/widgets/bordered_box.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,16 +19,20 @@ class _BMIFormState extends State<BMIForm> {
   String weight = "";
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: ShapeDecoration(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        color: Colors.white,
-      ),
+    return BorderedBox(
+      backgroundColor: 0xFF2196F3,
       child: Form(
         key: _formKey,
         child: Column(
           children: [
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "BMI Calculator",
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              ),
+            ),
+            const SizedBox(height: 20),
             TextFormField(
               keyboardType: TextInputType.number,
               onChanged: (value) => height = value,
@@ -49,9 +54,7 @@ class _BMIFormState extends State<BMIForm> {
                 fillColor: Colors.blue.withOpacity(0.2),
               ),
             ),
-            const SizedBox(height: 10),
-            const Divider(thickness: 1),
-            const SizedBox(height: 10),
+            const SizedBox(height: 20),
             FilledButton.icon(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {

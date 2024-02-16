@@ -12,6 +12,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.7
   get: ^4.6.6
 
 dev_dependencies:
@@ -24,3 +26,37 @@ flutter:
 
   assets:
     - "assets/"
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets/logo.png"
+    background_color: "#160039"
+    theme_color: "#2196F3"
+  windows:
+    generate: true
+    image_path: "assets/logo.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "assets/logo.png"
+
+flutter_native_splash:
+  color: "#160039"
+  image: assets/logo.png
+  branding: assets/logo.png
+  color_dark: "#160039"
+  image_dark: assets/logo.png
+  branding_dark: assets/logo.png
+
+  android_12:
+    image: assets/logo.png
+    icon_background_color: "#160039"
+    image_dark: assets/logo.png
+    icon_background_color_dark: "#160039"
+
+  web: false

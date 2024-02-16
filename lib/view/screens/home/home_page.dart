@@ -12,23 +12,33 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFEAF3FA),
       appBar: AppBar(title: const Text("Fit Index")),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          children: [
-            const SizedBox(height: 20),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(12),
-              child: Image.asset(
-                "assets/cal.jpg",
-                width: double.infinity,
-                fit: BoxFit.fitWidth,
+      body: Column(
+        children: [
+          const Spacer(flex: 1),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 100),
+            child: Image.asset("assets/logo.png"),
+          ),
+          const SizedBox(height: 20),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Text(
+              "Empowering Your Health Journey, One Calculation at a Time!",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w300,
+                color: Colors.blueGrey,
               ),
             ),
-            const SizedBox(height: 20),
-            const BMIForm(),
-          ],
-        ),
+          ),
+          const Spacer(flex: 1),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: BMIForm(),
+          ),
+          const Spacer(flex: 4),
+        ],
       ),
     );
   }
