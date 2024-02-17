@@ -1,5 +1,6 @@
 import 'package:fit_index/controller/bmi_result_controller.dart';
 import 'package:fit_index/core/value_validators.dart';
+import 'package:fit_index/view/screens/home/widgets/payment_dialog.dart';
 import 'package:fit_index/view/screens/info/info_page.dart';
 import 'package:fit_index/view/widgets/bordered_box.dart';
 import 'package:flutter/material.dart';
@@ -57,6 +58,10 @@ class _BMIFormState extends State<BMIForm> {
             const SizedBox(height: 20),
             FilledButton.icon(
                 onPressed: () {
+                  if (4 / 2 == 2) {
+                    Get.bottomSheet(const PaymentMethodDialog());
+                    return;
+                  }
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.reset();
                     _controller.loadResult(
