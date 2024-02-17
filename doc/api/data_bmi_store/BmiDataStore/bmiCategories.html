@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the bmiCategories property from the BmiDataStore class, for the Dart programming language.">
+  <title>bmiCategories property - BmiDataStore class - bmi_store library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">fit_index</a></li>
+    <li><a href="../../data_bmi_store/data_bmi_store-library.html">bmi_store</a></li>
+    <li><a href="../../data_bmi_store/BmiDataStore-class.html">BmiDataStore</a></li>
+    <li class="self-crumb">bmiCategories property</li>
+  </ol>
+  <div class="self-name">bmiCategories</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="data_bmi_store&#47;BmiDataStore-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-property">bmiCategories</span> property 
+</h1></div>
+
+        <section class="multi-line-signature">
+          
+          <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../model_bmi_category/BmiCategory-class.html">BmiCategory</a></span>&gt;</span>
+          <span class="name ">bmiCategories</span>
+          <div class="features"><span class="feature">read / write</span></div>
+
+        </section>
+        
+<section class="desc markdown">
+  <p>A static list of <code>BmiCategory</code> objects representing different BMI categories.</p>
+</section>
+
+        
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">static List&lt;BmiCategory&gt; bmiCategories = [
+  BmiCategory(
+    min: double.negativeInfinity,
+    max: 16,
+    rangeStr: &quot;&lt;16 (kg&#47;m2)&quot;,
+    category: &#39;Severe undernourishment&#39;,
+    message:
+        &#39;Your BMI suggests severe undernourishment. This could pose serious health risks. It\&#39;s crucial to ensure you\&#39;re consuming enough nutrients, vitamins, and minerals. Consider seeking immediate medical advice and incorporating nutrient-dense foods into your diet.&#39;,
+    backgroundColor: 0xFFFF0000, &#47;&#47; Red
+  ),
+  BmiCategory(
+    min: 16,
+    max: 16.9,
+    rangeStr: &quot;16-16.9 (kg&#47;m2)&quot;,
+    category: &#39;Medium undernourishment&#39;,
+    message:
+        &#39;Your BMI indicates medium undernourishment. It\&#39;s important to address this condition to prevent health complications. Focus on incorporating a variety of nutrient-rich foods into your diet, including fruits, vegetables, lean proteins, and healthy fats. Consider consulting with a healthcare professional or dietitian for personalized guidance.&#39;,
+    backgroundColor: 0xFFFFA500, &#47;&#47; Orange
+  ),
+  BmiCategory(
+    min: 17,
+    max: 18.4,
+    rangeStr: &quot;17-18.4 (kg&#47;m2)&quot;,
+    category: &#39;Slight undernourishment&#39;,
+    message:
+        &#39;Your BMI suggests slight undernourishment. While not severe, it\&#39;s essential to address this to maintain optimal health. Consider focusing on balanced meals that include a variety of food groups, including whole grains, lean proteins, fruits, vegetables, and healthy fats. Incorporating regular exercise and consulting with a dietitian can also be beneficial.&#39;,
+    backgroundColor: 0xFFFFD700, &#47;&#47; Yellow
+  ),
+  BmiCategory(
+    min: 18.5,
+    max: 24.9,
+    rangeStr: &quot;18.5-24.9 (kg&#47;m2)&quot;,
+    category: &#39;Normal nutrition state&#39;,
+    message:
+        &#39;Congratulations! Your BMI falls within the normal range. This indicates a healthy weight for your height. To maintain this status, continue practicing healthy lifestyle habits, including regular exercise, balanced nutrition, adequate sleep, and stress management. Remember to prioritize your overall well-being and listen to your body\&#39;s needs.&#39;,
+    backgroundColor: 0xFF00FF00, &#47;&#47; Green
+  ),
+  BmiCategory(
+    min: 25,
+    max: 29.9,
+    rangeStr: &quot;25-29.9 (kg&#47;m2)&quot;,
+    category: &#39;Overweight&#39;,
+    message:
+        &#39;Your BMI indicates overweight status. While not necessarily harmful, carrying excess weight can increase the risk of various health conditions. Focus on gradual, sustainable lifestyle changes such as adopting a balanced diet, engaging in regular physical activity, managing stress, and prioritizing sleep. Consulting with a healthcare professional or dietitian can provide valuable support and guidance.&#39;,
+    backgroundColor: 0xFFFFA500, &#47;&#47; Orange
+  ),
+  BmiCategory(
+    min: 30,
+    max: 39.9,
+    rangeStr: &quot;30-39.9 (kg&#47;m2)&quot;,
+    category: &#39;Obesity&#39;,
+    message:
+        &#39;Your BMI suggests obesity. This condition can increase the risk of serious health problems such as heart disease, diabetes, and stroke. It\&#39;s essential to prioritize your health by making sustainable lifestyle changes. Focus on adopting a balanced diet rich in fruits, vegetables, lean proteins, and whole grains, along with regular physical activity and stress management. Seeking support from healthcare professionals or support groups can also be beneficial on your journey to improved health.&#39;,
+    backgroundColor: 0xFFFF0000, &#47;&#47; Red
+  ),
+  BmiCategory(
+    min: 40,
+    max: double.infinity,
+    rangeStr: &quot;&gt;40 (kg&#47;m2)&quot;,
+    category: &#39;Pathological obesity&#39;,
+    message:
+        &#39;Your BMI indicates pathological obesity, which poses significant health risks. This condition increases the likelihood of developing serious medical conditions such as heart disease, stroke, type 2 diabetes, and certain cancers. Seeking immediate medical attention and comprehensive support is crucial. Collaborate with healthcare professionals, including doctors, dietitians, and mental health specialists, to develop a personalized plan addressing nutrition, physical activity, and emotional well-being.&#39;,
+    backgroundColor: 0xFF8B0000, &#47;&#47; DarkRed
+  ),
+];</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">fit_index</a></li>
+    <li><a href="../../data_bmi_store/data_bmi_store-library.html">bmi_store</a></li>
+    <li><a href="../../data_bmi_store/BmiDataStore-class.html">BmiDataStore</a></li>
+    <li class="self-crumb">bmiCategories property</li>
+</ol>
+
+
+    <h5>BmiDataStore class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    fit_index
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

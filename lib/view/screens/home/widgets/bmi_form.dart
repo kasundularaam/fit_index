@@ -5,8 +5,10 @@ import 'package:fit_index/view/widgets/bordered_box.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// A StatefulWidget representing a form for BMI (Body Mass Index) calculation.
 class BMIForm extends StatefulWidget {
-  const BMIForm({super.key});
+  /// Constructs a [BMIForm] widget.
+  const BMIForm({Key? key}) : super(key: key);
 
   @override
   State<BMIForm> createState() => _BMIFormState();
@@ -20,7 +22,7 @@ class _BMIFormState extends State<BMIForm> {
   @override
   Widget build(BuildContext context) {
     return BorderedBox(
-      backgroundColor: 0xFF2196F3,
+      borderColor: 0xFF2196F3,
       child: Form(
         key: _formKey,
         child: Column(

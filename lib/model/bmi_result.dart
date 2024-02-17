@@ -3,11 +3,30 @@ import 'dart:convert';
 
 import 'package:fit_index/model/bmi_category.dart';
 
+/// A class representing a BMI (Body Mass Index) result.
 class BmiResult {
+  /// The height in meters.
   final double height;
+
+  /// The weight in kilograms.
   final double weight;
+
+  /// The calculated BMI (Body Mass Index).
   final double bmi;
+
+  /// The category of BMI result.
   final BmiCategory category;
+
+  /// Constructs a [BmiResult] with the specified parameters.
+  ///
+  /// [height] is the height in meters.
+  ///
+  /// [weight] is the weight in kilograms.
+  ///
+  /// [bmi] is the calculated BMI (Body Mass Index).
+  ///
+  /// [category] is the category of the BMI result, which is an instance of [BmiCategory].
+
   BmiResult({
     required this.height,
     required this.weight,

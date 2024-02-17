@@ -3,11 +3,14 @@ import 'package:fit_index/view/screens/home/widgets/bmi_form.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// A StatelessWidget representing the home page of the application.
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  /// Constructs a [HomePage] widget.
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    // Register BmiResultController to the GetX dependency injection system
     Get.put(BmiResultController());
     return Scaffold(
       backgroundColor: const Color(0xFFEAF3FA),

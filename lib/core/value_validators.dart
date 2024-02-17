@@ -1,4 +1,8 @@
+/// A class containing static methods to validate height and weight values.
 class ValueValidator {
+  /// Validates the provided height value.
+  ///
+  /// Returns a String error message if validation fails, otherwise returns null.
   static String? validateHeight(String? heightStr) {
     if (heightStr == null) {
       return 'Height cannot be null.';
@@ -19,6 +23,9 @@ class ValueValidator {
     return null;
   }
 
+  /// Validates the provided weight value.
+  ///
+  /// Returns a String error message if validation fails, otherwise returns null.
   static String? validateWeight(String? weightStr) {
     if (weightStr == null) {
       return 'Weight cannot be null.';

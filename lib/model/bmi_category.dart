@@ -1,13 +1,39 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
+/// A class representing BMI (Body Mass Index) categories.
 class BmiCategory {
+  /// The minimum value of the BMI range for this category.
   final double min;
+
+  /// The maximum value of the BMI range for this category.
   final double max;
+
+  /// A string representation of the BMI range.
   final String rangeStr;
+
+  /// The category name.
   final String category;
+
+  /// A message describing the category.
   final String message;
+
+  /// The background color associated with the category.
   final int backgroundColor;
+
+  /// Constructs a [BmiCategory] with the specified parameters.
+  ///
+  /// [min] is the minimum value of the BMI range.
+  ///
+  /// [max] is the maximum value of the BMI range.
+  ///
+  /// [rangeStr] is a string representation of the BMI range.
+  ///
+  /// [category] is the name of the BMI category.
+  ///
+  /// [message] is a message describing the category.
+  ///
+  /// [backgroundColor] is the background color associated with the category.
   BmiCategory({
     required this.min,
     required this.max,

@@ -1,6 +1,8 @@
 import 'package:fit_index/model/bmi_category.dart';
 
+/// The class responsible for storing predefined BMI (Body Mass Index) categories.
 class BmiDataStore {
+  /// A static list of [BmiCategory] objects representing different BMI categories.
   static List<BmiCategory> bmiCategories = [
     BmiCategory(
       min: double.negativeInfinity,

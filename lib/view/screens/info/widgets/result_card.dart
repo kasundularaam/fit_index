@@ -6,19 +6,26 @@ import 'package:get/get.dart';
 
 import 'package:fit_index/controller/bmi_result_controller.dart';
 
+/// A StatelessWidget representing the result card displaying BMI results.
 class ResultCard extends StatelessWidget {
-  const ResultCard({super.key});
+  /// Constructs a [ResultCard] widget.
+  const ResultCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    // Get the instance of the BmiResultController using Get.find()
     final controller = Get.find<BmiResultController>();
 
+    // Return an Obx widget that rebuilds the UI when the result changes
     return Obx(() {
       final result = controller.result;
 
+      // If the result is null, return an empty SizedBox
       if (result == null) {
         return const SizedBox();
       }
+
+      // If the result is not null, build the UI for displaying the result
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -38,7 +45,7 @@ class ResultCard extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           BorderedBox(
-              backgroundColor: result.category.backgroundColor,
+              borderColor: result.category.backgroundColor,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -73,7 +80,7 @@ class ResultCard extends StatelessWidget {
               )),
           const SizedBox(height: 20),
           BorderedBox(
-            backgroundColor: result.category.backgroundColor,
+            borderColor: result.category.backgroundColor,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
