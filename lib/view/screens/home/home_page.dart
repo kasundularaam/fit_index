@@ -33,10 +33,12 @@ class HomePage extends StatelessWidget {
             ),
           ),
           const Spacer(flex: 1),
+          const SizedBox(height: 20),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: BMIForm(),
           ),
+          const SizedBox(height: 20),
           const Spacer(flex: 4),
         ],
       ),

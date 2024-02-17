@@ -8,13 +8,15 @@ class InfoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFEAF3FA),
-      appBar: AppBar(title: const Text("Info")),
+      appBar: AppBar(title: const Text("Results")),
       body: const SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
             SizedBox(height: 20),
             ResultCard(),
+            SizedBox(height: 20),
           ],
         ),
       ),

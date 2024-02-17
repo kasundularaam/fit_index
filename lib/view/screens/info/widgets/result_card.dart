@@ -23,7 +23,7 @@ class ResultCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            "Results",
+            "Your BMI Results",
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
           Divider(color: Color(result.category.backgroundColor)),
